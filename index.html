@@ -106,11 +106,11 @@
 
             function login(secret) {
                 var hash = sha1(secret)
-                var url = "/index.html"
+                var url = hash + "/index.html"
                 var alert = document.querySelectorAll('[data-id="alert"]')
 
                 var request = new XMLHttpRequest()
-                request.open('GET', url, true)
+                request.open('GET', "index.html", true)
 
                 request.onload = function () {
                     if (request.status >= 200 && request.status < 400) {
