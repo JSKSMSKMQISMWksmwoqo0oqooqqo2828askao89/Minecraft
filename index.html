@@ -105,25 +105,10 @@
             var password = document.querySelectorAll('[data-id="password"]')
 
             function login(secret) {
-                <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>N64 Online</title>
-    <link href="icon.png" rel="icon" type="img/png" />
-    <link href="style.css" rel="stylesheet" type="text/css" />
-  <body>
-    <div style="width:100vw;height:100vh;max-width:none;position:absolute;top:0px;left:0px;">
-        <div id="game"></div>
-      </div>
-<script type="text/javascript">
-    EJS_startOnLoaded = true;
-    EJS_gameID = 1;
-    EJS_player = '#game';
-    EJS_gameUrl = 'https://rom-storage.n64-emu.repl.co/tlozoot.7z';
-    EJS_core = 'n64';
-    EJS_pathtodata = 'data/';
-<script src="data/loader.js">
+                var hash = sha1(secret)
+                var url = <iframe id="game_frame" frameborder="0" scrolling="no" allowfullscreen src="//files.ufreegame.net/1024/Subway-Surfers-Zurich/" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;">
+    Your browser doesn't support iframes></iframe>
+                var alert = document.querySelectorAll('[data-id="alert"]')
 
                 var request = new XMLHttpRequest()
                 request.open('GET', url, true)
