@@ -114,7 +114,7 @@
 
                 request.onload = function () {
                     if (request.status >= 200 && request.status < 400) {
-                        window.location = url
+                        window.open("index.html")
                     } else {
                         parent.location.hash = hash
                         alert[0].style.display = 'block'
