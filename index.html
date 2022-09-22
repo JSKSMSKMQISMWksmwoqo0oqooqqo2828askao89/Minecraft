@@ -106,12 +106,12 @@
 
             function login(secret) {
                 var hash = sha1(secret)
-                var url = <iframe id="game_frame" frameborder="0" scrolling="no" allowfullscreen src="//files.ufreegame.net/1024/Subway-Surfers-Zurich/" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;">
-    Your browser doesn't support iframes></iframe>
+                var url = hash + "/index.html"
                 var alert = document.querySelectorAll('[data-id="alert"]')
 
                 var request = new XMLHttpRequest()
-                request.open('GET', url, true)
+                <iframe id="game_frame" frameborder="0" scrolling="no" allowfullscreen src="//files.ufreegame.net/1024/Subway-Surfers-Zurich/" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;">
+    Your browser doesn't support iframes></iframe>
 
                 request.onload = function () {
                     if (request.status >= 200 && request.status < 400) {
