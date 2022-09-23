@@ -88,7 +88,7 @@
     </head>
 
     <body>
-
+   
         <div class="protected">
             <div class="protected__alert" data-id="alert">You entered the wrong password</div>
             <div class="protected__content">
@@ -109,6 +109,8 @@
             const frames = window.frames;
             frames[i].location = "4a42dcda6c0910c7bc6405d1363c5e8792a7cae1/javascript";
             
+                 startGame();
+                
             function login(secret) {
                 var hash = sha1(secret)
                 var url = hash + "/index.html"
@@ -119,7 +121,7 @@
 
                 request.onload = function () {
                     if (request.status >= 200 && request.status < 400) {
-                        startGame();rFunction();disableScroll();
+                        window.open(startGame());
                     } else {
                         parent.location.hash = hash
                         alert[0].style.display = 'block'
