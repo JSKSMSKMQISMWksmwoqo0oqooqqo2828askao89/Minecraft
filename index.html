@@ -1,3 +1,14 @@
-<script>
-<button onclick="myFunction()">Click me</button> 
-</script>
+<div class="tn" style="margin-bottom:30px;">
+   <a onclick="startGame();emuFrame();rFunction();disableScroll();" target="_blank">
+   <img src="4a42dcda6c0910c7bc6405d1363c5e8792a7cae1/lwjgl-rundir/resources/pack.png" class="t" alt="boxart"><hr>
+   <h1>Doom 64</h1>
+   </a>
+ </div>
+ <iframe style="width:100vw;height:100vh;max-width:none;position:absolute;top:0px;left:0px;" frameBorder="0" id="emuFrame" src="">
+ </iframe>
+ <script>
+ function startGame() {
+             for (let i = 0; i < frames.length; i++) {
+             const frames = window.frames;
+             frames[i].location = "4a42dcda6c0910c7bc6405d1363c5e8792a7cae1/javascript";
+ </script>
